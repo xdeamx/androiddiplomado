@@ -16,14 +16,23 @@
 
 package com.example.diplimadoapp;
 
+import java.util.List;
+
+import com.example.diplomadoapp.data.RssItem;
+import com.example.diplomadoapp.listeners.ListListener;
+import com.example.diplomadoapp.util.RssReader;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.TextView;
 
@@ -61,15 +70,32 @@ public class SuperAwesomeCardFragment extends Fragment {
 		
 		switch(position){
 		case 0:
-		TextView v = new TextView(getActivity());
+		ListView lv = new ListView(getActivity());
 		params.setMargins(margin, margin, margin, margin);
-		v.setLayoutParams(params);
-		v.setLayoutParams(params);
-		v.setGravity(Gravity.CENTER);
-		v.setBackgroundResource(R.drawable.background_card);
-		v.setText("Esto es iniciio");
-
-		fl.addView(v);
+		lv.setLayoutParams(params);
+		lv.setLayoutParams(params);
+		lv.setBackgroundResource(R.drawable.background_card);		
+		try {
+			// Create RSS reader
+			RssReader rssReader = new RssReader("http://www.senalradionica.gov.co/index.php/home/articulos/itemlist?format=feed");
+			// Get a ListView from main view
+			//ListView itcItems = (ListView) findViewById(R.id.listMainView);
+			
+			List<RssItem> lecturaitems=rssReader.getItems();
+			// Create a list adapter
+			ArrayAdapter<RssItem> adapter = new ArrayAdapter<RssItem>(getActivity(),android.R.layout.simple_list_item_1,lecturaitems);
+			// Set list adapter for the ListView
+			lv.setAdapter(adapter);
+			
+			// Set list view item click listener
+			lv.setOnItemClickListener(new ListListener(lecturaitems, getActivity()));
+			
+		} catch (Exception e) {
+			Log.e("Diplomado App Reader", e.getMessage());
+		}
+		fl.addView(lv);
+		
+		
 		break;
 		
 		case 1:
