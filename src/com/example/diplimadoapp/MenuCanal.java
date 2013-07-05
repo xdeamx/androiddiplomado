@@ -1,9 +1,6 @@
 package com.example.diplimadoapp;
 
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
-
-
-
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +19,7 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MenuCanal extends FragmentActivity {
 	
@@ -30,6 +28,8 @@ public class MenuCanal extends FragmentActivity {
 	private PagerSlidingTabStrip tabs;
 	private ViewPager pager;
 	private MyPagerAdapter adapter;
+	
+	private TextView tituloCanal;
 
 	private Drawable oldBackground = null;
 	private int currentColor = 0xFF666666;
@@ -51,6 +51,9 @@ public class MenuCanal extends FragmentActivity {
 		pager.setPageMargin(pageMargin);
 
 		tabs.setViewPager(pager);
+		
+		tituloCanal=(TextView) findViewById(R.id.tituloCanal);
+		tituloCanal.setText("Radionica");
 
 	    changeColor(currentColor);
 		
