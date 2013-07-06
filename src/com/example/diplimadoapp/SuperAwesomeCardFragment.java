@@ -27,6 +27,7 @@ import android.graphics.drawable.GradientDrawable.Orientation;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.style.BackgroundColorSpan;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -45,6 +46,7 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 public class SuperAwesomeCardFragment extends Fragment {
 
@@ -184,15 +186,107 @@ public class SuperAwesomeCardFragment extends Fragment {
 		break;
 		
 		case 1:
+			
+			LinearLayout ll2=new LinearLayout(getActivity());
+			ll2.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			ll2.setOrientation(LinearLayout.VERTICAL);
+		    
+					
+			TableLayout tl2=new TableLayout(getActivity());
+			tl2.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+			
+			TableRow tr2 =new TableRow(getActivity());
+			tr2.setLayoutParams(new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+			tr2.setGravity(Gravity.FILL_HORIZONTAL);
+			tr2.setPadding(5,5,5,5);
+			
+		
 			TextView v0 = new TextView(getActivity());
 			params.setMargins(margin, margin, margin, margin);
-			v0.setLayoutParams(params);
-			v0.setLayoutParams(params);
+			v0.setLayoutParams(new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,2));
 			v0.setGravity(Gravity.CENTER);
-			v0.setBackgroundResource(R.drawable.background_card);
-			v0.setText("Esto es programas");
+			v0.setText("Acusticos Radionoca. Lunes a Viernes 8:00 a.m. - 9:00 a.m.");
+			tr2.addView(v0);
+			
+			ImageButton ib20=new ImageButton(getActivity());
+			ib20.setLayoutParams(new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+			ib20.setImageResource(R.drawable.pacusticos);
+			ib20.setBackgroundDrawable(null);
+			
+			tr2.addView(ib20);
+			
+			tl2.addView(tr2);
+			
+			TableRow tr3 =new TableRow(getActivity());
+			tr3.setLayoutParams(new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+			tr3.setGravity(Gravity.FILL_HORIZONTAL);
+			tr3.setPadding(5,5,5,5);
+			
 
-			fl.addView(v0);
+			
+			TextView v03 = new TextView(getActivity());
+			params.setMargins(margin, margin, margin, margin);
+			v03.setLayoutParams(new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,2));
+			v03.setGravity(Gravity.CENTER);
+			v03.setText("Acusticos Radionoca. Lunes a Viernes 8:00 a.m. - 9:00 a.m.");
+			tr3.addView(v03);
+			
+			ImageButton ib30=new ImageButton(getActivity());
+			ib30.setLayoutParams(new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+			ib30.setImageResource(R.drawable.pradionica_lacarta);
+			ib30.setBackgroundDrawable(null);
+			
+			tr3.addView(ib30);			
+			
+			tl2.addView(tr3);
+			
+			TableRow tr4 =new TableRow(getActivity());
+			tr4.setLayoutParams(new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+			tr4.setGravity(Gravity.FILL_HORIZONTAL);
+			tr4.setPadding(5,5,5,5);
+			
+		
+			TextView v04 = new TextView(getActivity());
+			params.setMargins(margin, margin, margin, margin);
+			v04.setLayoutParams(new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,2));
+			v04.setGravity(Gravity.CENTER);
+			v04.setText("Acusticos Radionoca. Lunes a Viernes 8:00 a.m. - 9:00 a.m.");
+			tr4.addView(v04);
+			
+			tl2.addView(tr4);
+			
+			ImageButton ib40=new ImageButton(getActivity());
+			ib40.setLayoutParams(new TableRow.LayoutParams(0,LayoutParams.WRAP_CONTENT,1));
+			ib40.setImageResource(R.drawable.prockeros);
+			ib40.setBackgroundDrawable(null);
+			
+				
+			
+			
+			tr4.addView(ib40);
+			
+			ll2.addView(tl2);
+			
+
+			/*
+		   VideoView videoView = new VideoView(getActivity());
+
+			Uri path = Uri.parse("rtmp://cdns840stu0010.multistream.net:80/rtvcRadionicalive/?pass=|radionica|");
+
+			videoView.setVideoURI(path);
+			videoView.start(); 
+		 
+		TableRow tr5 =new TableRow(getActivity());
+			tr5.setLayoutParams(new TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT));
+			tr5.setGravity(Gravity.FILL_HORIZONTAL);
+			tr5.setPadding(5,5,5,5);
+			tr5.addView(videoView);
+			
+			ll2.addView(tr5);*/
+			
+			
+			
+			fl.addView(ll2);
 		break;
 		case 2:
 			ListView lv = new ListView(getActivity());

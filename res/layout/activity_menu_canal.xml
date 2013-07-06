@@ -39,10 +39,21 @@
          <TextView
              android:id="@+id/tituloCanal"
              android:layout_width="wrap_content"
-             android:layout_height="36dp"
+             android:layout_height="55dp"
+             android:paddingTop="15dp"
              android:text="Medium Text"
              android:textAppearance="?android:attr/textAppearanceMedium" />
 
      </LinearLayout>
+
+     <ImageButton
+         android:id="@+id/reprostreaming"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/pager"
+         android:layout_alignParentTop="true"
+         android:layout_alignRight="@+id/pager"
+         android:background="@null"
+         android:src="@drawable/play" />
     
 </RelativeLayout>

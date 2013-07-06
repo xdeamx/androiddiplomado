@@ -136,23 +136,43 @@ containing a value of this type.
         public static final int ic_launcher_gmail=0x7f02000b;
         public static final int ic_launcher_gmaps=0x7f02000c;
         public static final int ic_launcher_gplus=0x7f02000d;
-        public static final int tabs_pattern=0x7f02000e;
-        public static final int tabs_pattern_diagonal=0x7f02000f;
-        public static final int twitter=0x7f020010;
-        public static final int youtube=0x7f020011;
+        public static final int pacusticos=0x7f02000e;
+        public static final int play=0x7f02000f;
+        public static final int pradionica_lacarta=0x7f020010;
+        public static final int prn_elatardexer=0x7f020011;
+        public static final int prn_laondasonora=0x7f020012;
+        public static final int prn_nochetrasnoche=0x7f020013;
+        public static final int prn_noticias=0x7f020014;
+        public static final int prockeros=0x7f020015;
+        public static final int ptop100=0x7f020016;
+        public static final int tabs_pattern=0x7f020017;
+        public static final int tabs_pattern_diagonal=0x7f020018;
+        public static final int twitter=0x7f020019;
+        public static final int youtube=0x7f02001a;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000b;
+        public static final int action_settings=0x7f090016;
         public static final int btnradio=0x7f090000;
         public static final int btntv=0x7f090001;
         public static final int button1=0x7f090002;
         public static final int datosprincipales=0x7f090005;
-        public static final int detailsText=0x7f090007;
-        public static final int imageButton1=0x7f09000a;
-        public static final int imageView1=0x7f090008;
+        public static final int detailsText=0x7f090008;
+        public static final int imageButton1=0x7f09000b;
+        public static final int imageView1=0x7f090009;
+        public static final int imageView2=0x7f09000e;
+        public static final int imageView3=0x7f090011;
+        public static final int imageView4=0x7f090014;
         public static final int pager=0x7f090004;
-        public static final int tableRow1=0x7f090009;
+        public static final int reprostreaming=0x7f090007;
+        public static final int tableRow1=0x7f09000a;
+        public static final int tableRow2=0x7f09000d;
+        public static final int tableRow3=0x7f090010;
+        public static final int tableRow4=0x7f090013;
         public static final int tabs=0x7f090003;
+        public static final int textView1=0x7f09000c;
+        public static final int textView2=0x7f09000f;
+        public static final int textView3=0x7f090012;
+        public static final int textView4=0x7f090015;
         public static final int tituloCanal=0x7f090006;
     }
     public static final class layout {
@@ -160,6 +180,7 @@ containing a value of this type.
         public static final int activity_menu_canal=0x7f030001;
         public static final int fragment_quick_contact=0x7f030002;
         public static final int fragment_rsslist_overview=0x7f030003;
+        public static final int listaprogramas=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f080000;

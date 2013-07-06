@@ -1,10 +1,13 @@
 package com.example.diplimadoapp;
 
 import com.astuetz.viewpager.extensions.PagerSlidingTabStrip;
+
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -19,6 +22,8 @@ import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MenuCanal extends FragmentActivity {
@@ -54,6 +59,21 @@ public class MenuCanal extends FragmentActivity {
 		
 		tituloCanal=(TextView) findViewById(R.id.tituloCanal);
 		tituloCanal.setText("Radionica");
+		
+		//radio nacional rtsp://cdns840stu0010.multistream.net/rtvcRadioNacionallive/rtvcRadioNacional-48.stream
+		
+		//inst Others: rtsp://cdns840stu1010.multistream.net:80/rtvclive/live-200
+		
+		//senal col Others: rtsp://cdns840stu1010.multistream.net:80/rtvc2live/live-200
+		ImageButton bstreaming=(ImageButton) findViewById(R.id.reprostreaming);
+		bstreaming.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+            	String videoUrl = "rtsp://cdns840stu0010.multistream.net/rtvcRadionicalive/rtvcRadionica-48.stream";
+    		    Intent i = new Intent(android.content.Intent.ACTION_VIEW);
+    		    i.setData(Uri.parse(videoUrl));
+    		    startActivity(i);	    		    
+             }
+        });
 
 	    changeColor(currentColor);
 		
